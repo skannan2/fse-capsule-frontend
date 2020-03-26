@@ -42,7 +42,7 @@
        <mat-label>Choose a date</mat-label>
        <input class="form-control" style="display:unset;width:85%" id="startDate" name="startDate"  [matDatepicker]="picker" 
        [(ngModel)]="task.startDate">  
-       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>      
+       <mat-datepicker-toggle class="mat-datepicker-toggle-active" matSuffix [for]="picker"></mat-datepicker-toggle>      
        <mat-datepicker #picker></mat-datepicker>
     </div>
 </div>
@@ -56,7 +56,7 @@
         <mat-label>Choose a date</mat-label>
         <input class="form-control" style="display:unset;width:85%" id="endDate" name="endDate" 
         [matDatepicker]="endDate" [(ngModel)]="task.endDate">  
-        <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>      
+        <mat-datepicker-toggle class="mat-datepicker-toggle-active" matSuffix [for]="endDate"></mat-datepicker-toggle>      
         <mat-datepicker #endDate></mat-datepicker>
     </div>
     
