@@ -6,7 +6,7 @@
         <label for="task">Task:</label>
     </div>
     <div class="col-4">
-        <input id="task" name="task" type="text" class="form-control" [(ngModel)]="task.task">
+        <input id="task" name="task" type="text" class="form-control" required [(ngModel)]="task.task">
     </div>
 </div>
 
@@ -28,7 +28,7 @@
         <label for="parenttask">Parent Task:</label>
     </div>
     <div class="col-4">
-        <input type="text" class="form-control" id="parentTask" name="parentTask" [(ngModel)]="task.parentTask">
+        <input type="text" class="form-control" required id="parentTask" name="parentTask" [(ngModel)]="task.parentTask">
     </div>
 </div>
 
@@ -40,9 +40,9 @@
 
        <!-- <dp-date-picker name="startDate" [(ngModel)]="task.startDate" [config]="datePickerConfig"></dp-date-picker>  -->
        <mat-label>Choose a date</mat-label>
-       <input class="form-control" style="display:unset;width:85%" id="startDate" name="startDate"  
+       <input class="form-control" required style="display:unset;width:85%" id="startDate" name="startDate"  
        [matDatepicker]="picker" [(ngModel)]="task.startDate">  
-       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>      
+       <mat-datepicker-toggle class="mat-datepicker-toggle-active" matSuffix [for]="picker"></mat-datepicker-toggle>      
        <mat-datepicker #picker></mat-datepicker> 
     </div>
 </div>
@@ -54,9 +54,9 @@
     <div class="col-4">
         <!--<input type="text" class="form-control" id="endDate" name="endDate" [(ngModel)]="task.endDate">-->
         <mat-label>Choose a date</mat-label>
-        <input class="form-control" style="display:unset;width:85%" id="endDate" name="endDate" 
+        <input class="form-control" required style="display:unset;width:85%" id="endDate" name="endDate" 
         [matDatepicker]="endDate" [(ngModel)]="task.endDate">  
-        <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>      
+        <mat-datepicker-toggle class="mat-datepicker-toggle-active" matSuffix [for]="endDate"></mat-datepicker-toggle>      
         <mat-datepicker #endDate></mat-datepicker>
     </div>
     
